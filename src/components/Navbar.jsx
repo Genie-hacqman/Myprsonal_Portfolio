@@ -26,8 +26,11 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         
         {/* Brand logo / title */}
 
-        <NavLink to="/" className="text-xl font-semibold tracking-wide text-slate-900 dark:text-white">
-          Hack<span className="text-cyan-500">.dev</span>
+        <NavLink to="/" className="flex items-center gap-3 text-lg font-semibold tracking-wide text-slate-900 dark:text-white">
+          <img src="/icons/logo.png" alt="Genes Creative logo" className="h-10 w-10 rounded-xl bg-slate-100 p-1 dark:bg-slate-800 object-contain" />
+          <span>
+            Genes<span className="text-cyan-500"> Creative</span>
+          </span>
         </NavLink>
 
         {/* Desktop navigation links */}
@@ -75,7 +78,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
 
       {/* Mobile navigation panel shown only when the menu is open. */}
 
-      
+
       {isOpen && (
         <div className="border-t border-slate-200 bg-white px-4 py-4 dark:border-slate-800 dark:bg-slate-950 md:hidden">
           <div className="flex flex-col gap-3">
