@@ -13,7 +13,7 @@ const Contact = () => {
 
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
 
-  
+
   // Track the submission status shown to the user after sending the form.
 
 
@@ -32,8 +32,8 @@ const Contact = () => {
     }
 
     emailjs.send(
-      'service_id',
-      'template_id',
+      'service_l8s1y3p',
+      'template_mvrgbq2',
       {
         from_name: formData.name,
         reply_to: formData.email,
