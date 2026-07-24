@@ -2,21 +2,21 @@
 
 export const experience = [
   {
-    company: 'Pixel Forge',
+    company: 'Kath',
     role: 'Frontend Developer',
     period: '2022 - Present',
-    description: 'Leading interface development for SaaS products and building micro-interactions that elevate product quality.',
+    description: 'Leading the development of responsive and accessible frontend applications.',
   },
   {
-    company: 'Nova Labs',
-    role: 'UI Engineer',
-    period: '2020 - 2022',
-    description: 'Designed reusable React components and collaborated closely with product teams to ship polished experiences.',
+    company: 'Freelance',
+    role: 'backend Developer',
+    period: '2020 - Present',
+    description: 'Designing and implementing robust backend solutions.',
   },
   {
-    company: 'Bright Studio',
-    role: 'Web Designer',
-    period: '2018 - 2020',
-    description: 'Created responsive marketing sites and visual systems tailored to client goals and brand identity.',
+    company: 'Network Solutions',
+    role: 'Kath',
+    period: '2023 - 2025',
+    description: 'Solving complex problems and creating efficient solutions.',
   },
 ];

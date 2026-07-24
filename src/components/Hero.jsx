@@ -13,10 +13,10 @@ const Hero = () => {
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
           <p className="text-sm font-semibold uppercase tracking-[0.35em] text-cyan-500">Full Stack Developer</p>
           <h1 className="mt-4 text-4xl font-black tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-7xl">
-            Hello, I&apos;m <span className="text-cyan-500">Hackman Agyemang</span>
+            I build <span className="text-cyan-500">thoughtful digital experiences</span> that feel clear, calm, and memorable.
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-slate-600 dark:text-slate-300">
-            I'm a full stack developer specializing in building exceptional digital experiences. I'm passionate about creating beautiful, functional web applications that solve real-world problems. Currently focused on building accessible, user-centered products.
+          <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600 dark:text-slate-300">
+            I’m <span className="block text-2xl font-semibold tracking-wide text-cyan-500 sm:text-3xl">Hackman Agyemang</span> — a developer who enjoys turning ideas into websites and products that feel personal, useful, and beautifully crafted. I care about detail, accessibility, and creating experiences people genuinely enjoy using.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Button href="#contact">Let&apos;s Talk</Button>

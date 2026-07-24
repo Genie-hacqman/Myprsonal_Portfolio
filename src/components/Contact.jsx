@@ -6,7 +6,9 @@ import { FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
 import SectionTitle from './SectionTitle';
 
 const Contact = () => {
+  // Store the contact form values in local state.
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+  // Track the submission status shown to the user after sending the form.
   const [status, setStatus] = useState('');
 
   const handleChange = (event) => {

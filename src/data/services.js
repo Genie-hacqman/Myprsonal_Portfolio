@@ -2,26 +2,23 @@
 
 export const services = [
   {
-    title: 'Web Development',
-    description: 'Building fast, reliable web applications with modern React and Vite workflows.',
+    title: 'Product-minded Web Development',
+    description: 'I build websites and web apps that feel thoughtful from the first click to the final interaction.',
     icon: '💻',
   },
-
   {
-    title: 'Frontend Development',
-    description: 'Turning ideas into polished user experiences with responsive and interactive interfaces.',
+    title: 'Frontend Experience Design',
+    description: 'I turn ideas into interfaces that are polished, intuitive, and genuinely enjoyable to use.',
     icon: '⚡',
   },
   {
-    title: 'Responsive Websites',
-    description: 'Ensuring every screen size feels intuitive, attractive, and effortless to use.',
+    title: 'Responsive, Accessible Interfaces',
+    description: 'I make sure every screen feels calm, clear, and effortless — whether someone is on mobile or desktop.',
     icon: '📱',
   },
-
-    {
-        title: 'Backend Development',
-        description: 'Creating robust server-side applications and APIs to power your web solutions.',
-        icon: '🛠️',
-    },
-
+  {
+    title: 'Reliable Backend & Integrations',
+    description: 'I connect the pieces behind the scenes so your product runs smoothly and scales with confidence.',
+    icon: '🛠️',
+  },
 ];

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
 
+// ProjectCard renders a flip-style preview for each portfolio item.
 const ProjectCard = ({ project }) => {
   return (
     <div className="w-135] perspective-[1000px]">
@@ -10,6 +11,7 @@ const ProjectCard = ({ project }) => {
         style={{ transformStyle: 'preserve-3d' }}
         className="relative h-105"
       >
+        {/* Front side shows a compact overview of the project. */}
         <div
           className="absolute inset-0 overflow-hidden rounded-[20px] bg-[#1b233d] p-1.25 shadow-[0_7px_20px_rgba(100,100,111,0.2)]"
           style={{ backfaceVisibility: 'hidden' }}
@@ -50,6 +52,7 @@ const ProjectCard = ({ project }) => {
           </div>
         </div>
 
+        {/* Back side reveals the full project details and links. */}
         <div
           className="absolute inset-0 overflow-hidden rounded-[20px] bg-[#10172a] p-1.25 shadow-[0_7px_20px_rgba(100,100,111,0.2)]"
           style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}

@@ -13,13 +13,10 @@ const About = () => {
         </motion.div>
 
         <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-          <SectionTitle eyebrow="About Me" title="Crafting thoughtful digital experiences" description="I’m a developer who loves turning complex ideas into delightful, human-centered products." />
+          <SectionTitle eyebrow="About Me" title="Crafting thoughtful digital experiences" description="I’m drawn to the quiet details that make a product feel effortless, useful, and genuinely human." />
           <p className="text-lg leading-8 text-slate-600 dark:text-slate-300">
-            I'm a passionate developer with a strong foundation in both design and development. I love creating intuitive user experiences and writing clean, efficient code.
-            When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.
-            My goal is to build products that make a difference and collaborate with talented teams to create something meaningful.
-
-
+            I’m a developer who loves the point where an idea becomes something real — a website, a product, or a digital experience people can feel confident using. I enjoy working at the intersection of design, code, and problem-solving, and I care deeply about making interfaces feel clear, welcoming, and polished.
+            Outside of building, I’m always learning, exploring new tools, and looking for better ways to create experiences that respect the people using them.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-950/70">

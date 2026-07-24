@@ -2,6 +2,7 @@
 
 import { Link } from 'react-router-dom';
 
+// NotFound displays a friendly fallback page for invalid routes.
 const NotFound = () => {
   return (
     <section className="flex min-h-[70vh] items-center justify-center px-4 py-20 sm:px-6 lg:px-8">

@@ -3,6 +3,7 @@ import { FiGithub, FiLinkedin, FiInstagram } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const SocialLinks = ({ className = '' }) => {
+  // Centralize the profile links so they can be reused across the navbar and footer.
   const links = [
     { label: 'GitHub', icon: <FiGithub size={20} />, href: 'https://github.com/Genie-hacqman' },
     { label: 'LinkedIn', icon: <FiLinkedin size={20} />, href: 'https://www.linkedin.com/in/hackmankofiagyemang' },
