@@ -1,4 +1,6 @@
 // Contact form and contact details section.
+
+
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
@@ -7,8 +9,14 @@ import SectionTitle from './SectionTitle';
 
 const Contact = () => {
   // Store the contact form values in local state.
+
+
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+
+  
   // Track the submission status shown to the user after sending the form.
+
+
   const [status, setStatus] = useState('');
 
   const handleChange = (event) => {

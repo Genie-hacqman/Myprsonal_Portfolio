@@ -1,4 +1,6 @@
 // Hero section for the homepage with headline and call-to-action.
+
+
 import { motion } from 'framer-motion';
 import { FiArrowRight } from 'react-icons/fi';
 import SocialLinks from './SocialLinks';

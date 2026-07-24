@@ -1,10 +1,16 @@
 // Navbar.jsx renders the top navigation bar and mobile menu state.
+
+
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FiMenu, FiX, FiMoon, FiSun } from 'react-icons/fi';
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
+
+
   // Track whether the mobile menu is expanded on small screens.
+
+
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
@@ -25,6 +31,8 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         </NavLink>
 
         {/* Desktop navigation links */}
+
+
         <div className="hidden items-center gap-8 md:flex">
           {links.map((link) => (
             <NavLink
@@ -40,7 +48,10 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         </div>
 
         <div className="flex items-center gap-3">
+
+
           {/* Dark mode toggle button */}
+
           <button
             onClick={toggleDarkMode}
             className="rounded-full border border-slate-300 p-2 text-slate-700 transition hover:bg-slate-100 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800"
@@ -50,6 +61,8 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           </button>
 
           {/* Mobile menu button */}
+
+
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="rounded-full border border-slate-300 p-2 text-slate-700 md:hidden dark:border-slate-700 dark:text-slate-200"
@@ -61,6 +74,8 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
       </nav>
 
       {/* Mobile navigation panel shown only when the menu is open. */}
+
+      
       {isOpen && (
         <div className="border-t border-slate-200 bg-white px-4 py-4 dark:border-slate-800 dark:bg-slate-950 md:hidden">
           <div className="flex flex-col gap-3">

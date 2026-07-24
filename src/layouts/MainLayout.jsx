@@ -11,13 +11,17 @@ const MainLayout = ({ darkMode, toggleDarkMode, children }) => {
 
       {/* Navbar receives the theme state and toggle handler. */}
 
+
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
       {/* Render nested routes or children content inside the page body. */}
 
+
       <main>{children ?? <Outlet />}</main>
 
       {/* Footer and back-to-top support. */}
+
+      
       <Footer />
       <ScrollToTop />
     </div>

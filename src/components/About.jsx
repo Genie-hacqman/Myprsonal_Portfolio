@@ -1,4 +1,6 @@
 // Reusable about section component used inside the About page.
+
+
 import { motion } from 'framer-motion';
 import { FiDownload } from 'react-icons/fi';
 import SectionTitle from './SectionTitle';

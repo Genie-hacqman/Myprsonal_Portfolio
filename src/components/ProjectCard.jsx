@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
 
 // ProjectCard renders a flip-style preview for each portfolio item.
+
+
 const ProjectCard = ({ project }) => {
   return (
     <div className="w-135] perspective-[1000px]">

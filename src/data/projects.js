@@ -6,6 +6,8 @@ import imgStay from '../assets/images/stay ease.png';
 import imgCarCommerce from '../assets/images/obolocar.png';
 
 // Portfolio projects used throughout the site for the showcase and filtering views.
+
+
 export const projects = [
   {
     title: 'Expense Tracker',

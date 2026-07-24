@@ -1,4 +1,5 @@
 // Single service card component used in the services section.
+
 import { motion } from 'framer-motion';
 
 const ServiceCard = ({ service }) => {

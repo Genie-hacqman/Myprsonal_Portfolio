@@ -1,5 +1,6 @@
 // Footer section visible at the bottom of every page.
 
+
 import SocialLinks from './SocialLinks';
 
 const Footer = () => {
