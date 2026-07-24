@@ -1,21 +1,68 @@
-<<<<<<< HEAD
 # Myprsonal_Portfolio
-My personal portfolio website built with React, Vite and Tailwaind Css
-=======
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern personal portfolio website built with React, Vite, Tailwind CSS, and Framer Motion. It showcases projects, services, experience, and a contact form in a polished and responsive single-page experience.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Responsive and modern landing page design
+- Smooth animations and transitions
+- Project showcase with filtering
+- About, experience, and services sections
+- Contact form integration with EmailJS
+- Dark mode support
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite
+- Tailwind CSS
+- Framer Motion
+- React Router DOM
+- React Icons
+- EmailJS
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
->>>>>>> 67dcdc6 (Initail commit)
+- src/components - Reusable UI sections and layout pieces
+- src/pages - Route-based pages such as Home, About, Projects, and Contact
+- src/data - Content for projects, services, experience, and skills
+- src/assets - Images and other static assets
+- public - Static files such as the favicon
+
+## Getting Started
+
+### 1. Install dependencies
+
+```bash
+npm install
+```
+
+### 2. Start the development server
+
+```bash
+npm run dev
+```
+
+The app will open locally in your browser at the Vite URL shown in the terminal.
+
+### 3. Build for production
+
+```bash
+npm run build
+```
+
+## Customization
+
+You can personalize the portfolio by editing:
+
+- content in src/data
+- sections in src/components
+- branding and metadata in index.html
+
+## Contact Form
+
+The contact form uses EmailJS. To make it work, replace the placeholder service, template, and public keys in the contact component with your own credentials.
+
+## License
+
+This project is open for personal and educational use.
