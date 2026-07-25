@@ -61,7 +61,22 @@ You can personalize the portfolio by editing:
 
 ## Contact Form
 
-The contact form uses EmailJS. To make it work, replace the placeholder service, template, and public keys in the contact component with your own credentials.
+The contact form uses EmailJS to send messages directly from the site.
+
+### Required EmailJS configuration
+
+Create a `.env` file in the project root and add your EmailJS public key:
+
+```bash
+VITE_EMAILJS_PUBLIC_KEY=your_actual_public_key_here
+```
+
+The contact component already uses:
+
+- Service ID: `service_l8s1y3p`
+- Template ID: `template_il38l1s`
+
+If the public key is invalid, the form will show a clear error message and the browser console will include the EmailJS response.
 
 ## License
 

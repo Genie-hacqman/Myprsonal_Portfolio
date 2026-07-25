@@ -51,7 +51,7 @@ const Projects = () => {
         {/* Render each filtered project card. */}
 
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid items-stretch gap-8 md:grid-cols-2">
           {filteredProjects.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}

@@ -15,7 +15,7 @@ export const experience = [
     description: 'Designing and implementing robust backend solutions.',
   },
   {
-    company: 'Kath',
+    company: 'Kaths',
     role: 'Network Solutions',
     period: '2023 - 2025',
     description: 'Solving complex problems and creating efficient solutions.',

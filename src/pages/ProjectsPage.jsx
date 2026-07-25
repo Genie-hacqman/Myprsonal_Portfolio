@@ -14,7 +14,7 @@ const ProjectsPage = () => {
 
   // Build a list of unique categories from the project data.
 
-  
+
   const categories = useMemo(() => ['All', ...new Set(projects.map((project) => project.category))], []);
   const filteredProjects = useMemo(() => {
     if (filter === 'All') return projects;
@@ -32,7 +32,7 @@ const ProjectsPage = () => {
             </button>
           ))}
         </div>
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid items-stretch gap-8 md:grid-cols-2 xl:grid-cols-3">
           {filteredProjects.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}
