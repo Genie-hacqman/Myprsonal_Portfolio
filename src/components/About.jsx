@@ -13,6 +13,7 @@ const About = () => {
         <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="rounded-3xl border border-slate-200 bg-white/70 p-6 shadow-lg dark:border-slate-800 dark:bg-slate-900/70">
           <img src={imgProfile} alt="Profile" className="h-80 w-full rounded-2xl object-cover" />
         </motion.div>
+        
 
         <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
           <SectionTitle eyebrow="About Me" title="Crafting thoughtful digital experiences" description="I’m drawn to the quiet details that make a product feel effortless, useful, and genuinely human." />
