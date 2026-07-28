@@ -1,96 +1,81 @@
-// Contact form and contact details section.
+// Contact section with a clean, professional call-to-action.
 
-
-import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import emailjs from '@emailjs/browser';
-import { FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
+import { FiArrowRight, FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
 import SectionTitle from './SectionTitle';
 
+const whatsappNumber = '233549701424';
+const whatsappBaseUrl = `https://wa.me/${whatsappNumber}`;
+
 const Contact = () => {
-  // Use a ref for the form so we can use EmailJS `sendForm` as shown in the docs.
-  const formRef = useRef(null);
-
-  // Store the contact form values in local state (keeps inputs controlled and allows validation).
-  const [formData, setFormData] = useState({ user_name: '', user_email: '', user_subject: '', message: '' });
-
-  // Track the submission status shown to the user after sending the form.
-  const [status, setStatus] = useState('');
-
-  const handleChange = (event) => {
-    setFormData({ ...formData, [event.target.name]: event.target.value });
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    if (!formData.user_name || !formData.user_email || !formData.message) {
-      setStatus('Please fill in your name, email, and message.');
-      return;
-    }
-
-    // Prefer providing the public key through an environment variable for security.
-    // Add VITE_EMAILJS_PUBLIC_KEY to your .env if you haven't already.
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'public_key';
-
-    emailjs
-      .sendForm('service_l8s1y3p', 'template_il38l1s', formRef.current, {
-        publicKey,
-      })
-      .then((response) => {
-        console.log('EmailJS SUCCESS:', response);
-        setStatus('Thanks for reaching out. Your message is on its way.');
-        setFormData({ user_name: '', user_email: '', user_subject: '', message: '' });
-      })
-      .catch((error) => {
-        // Show a helpful error message and include console logging for debugging.
-        console.error('EmailJS FAILED', error);
-        if (error?.status === 400 && error?.text?.includes('Public Key is invalid')) {
-          setStatus('Invalid EmailJS public key. Add VITE_EMAILJS_PUBLIC_KEY to your .env file.');
-        } else {
-          setStatus('Something went wrong. Please check the console for details.');
-        }
-      });
-  };
-
   return (
     <section id="contact" className="px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <SectionTitle eyebrow="Contact" title="Let’s build something memorable" description="Whether you’re kicking off a new project or need a polished redesign, I’d love to hear about it." />
-        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
-          <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="rounded-3xl border border-slate-200 bg-linear-to-br from-cyan-500 to-blue-600 p-8 text-white shadow-xl">
-            <h3 className="text-2xl font-semibold">Contact details</h3>
-            <div className="mt-8 space-y-4">
+        <SectionTitle
+          eyebrow="Contact"
+          title="Let’s talk about your next idea"
+          description="I’m available for freelance work, collaborations, and thoughtful digital experiences."
+        />
+
+        <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="rounded-3xl border border-slate-200 bg-linear-to-br from-cyan-500 to-blue-600 p-8 text-white shadow-xl"
+          >
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-100">Available now</p>
+            <h3 className="mt-3 text-2xl font-semibold">Ready to build something meaningful?</h3>
+            <p className="mt-4 text-sm leading-7 text-cyan-50/90">
+              Whether you need a polished website, a product redesign, or a quick strategy conversation, I’d be glad to connect.
+            </p>
+
+            <div className="mt-8 space-y-4 text-sm">
               <div className="flex items-center gap-3"><FiMail size={18} /> <span>mirthfulmickgh12@gmail.com</span></div>
-              <div className="flex items-center gap-3"><FiPhone size={18} /> <span>+233 549 7014 24</span></div>
+              <a href={whatsappBaseUrl} target="_blank" rel="noreferrer" className="flex items-center gap-3 transition hover:opacity-90">
+                <FiPhone size={18} /> <span>+233 549 7014 24</span>
+              </a>
               <div className="flex items-center gap-3"><FiMapPin size={18} /> <span>Accra, Ghana</span></div>
             </div>
           </motion.div>
 
-          <motion.form ref={formRef} initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} onSubmit={handleSubmit} className="rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-lg dark:border-slate-800 dark:bg-slate-900/70">
-            <div className="grid gap-4 sm:grid-cols-2">
-              <label className="text-sm font-medium text-slate-700 dark:text-slate-200">
-                Name
-                <input name="user_name" value={formData.user_name} onChange={handleChange} className="mt-2 w-full rounded-2xl border border-slate-300 bg-slate-50 px-4 py-3 outline-none ring-0 dark:border-slate-700 dark:bg-slate-950" required />
-              </label>
-              <label className="text-sm font-medium text-slate-700 dark:text-slate-200">
-                Email
-                <input type="email" name="user_email" value={formData.user_email} onChange={handleChange} className="mt-2 w-full rounded-2xl border border-slate-300 bg-slate-50 px-4 py-3 outline-none ring-0 dark:border-slate-700 dark:bg-slate-950" required />
-              </label>
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="rounded-3xl border border-slate-200 bg-white/80 p-8 shadow-lg dark:border-slate-800 dark:bg-slate-900/70"
+          >
+            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950/60">
+              <p className="text-sm font-medium text-slate-500 dark:text-slate-400">Start with a quick conversation</p>
+              <h4 className="mt-2 text-xl font-semibold text-slate-900 dark:text-white">Choose the best way to reach me</h4>
+
+              <div className="mt-6 space-y-3">
+                <a
+                  href={whatsappBaseUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center justify-between rounded-2xl bg-linear-to-r from-cyan-500 to-blue-600 px-4 py-4 text-white shadow-lg shadow-cyan-500/20 transition hover:-translate-y-1"
+                >
+                  <span className="font-medium">Message on WhatsApp</span>
+                  <FiArrowRight size={18} />
+                </a>
+
+                <a
+                  href="mailto:mirthfulmickgh12@gmail.com"
+                  className="flex items-center justify-between rounded-2xl border border-slate-200 px-4 py-4 text-slate-700 transition hover:border-cyan-400 hover:text-cyan-600 dark:border-slate-700 dark:text-slate-200"
+                >
+                  <span className="font-medium">Send an email</span>
+                  <FiArrowRight size={18} />
+                </a>
+              </div>
             </div>
-            <label className="mt-4 block text-sm font-medium text-slate-700 dark:text-slate-200">
-              Subject
-              <input name="user_subject" value={formData.user_subject} onChange={handleChange} className="mt-2 w-full rounded-2xl border border-slate-300 bg-slate-50 px-4 py-3 outline-none ring-0 dark:border-slate-700 dark:bg-slate-950" />
-            </label>
-            <label className="mt-4 block text-sm font-medium text-slate-700 dark:text-slate-200">
-              Message
-              <textarea name="message" value={formData.message} onChange={handleChange} rows="5" className="mt-2 w-full rounded-2xl border border-slate-300 bg-slate-50 px-4 py-3 outline-none ring-0 dark:border-slate-700 dark:bg-slate-950" required />
-            </label>
-            <button type="submit" className="mt-6 inline-flex items-center rounded-full bg-linear-to-r from-cyan-500 to-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-cyan-500/20 transition hover:-translate-y-1">
-              Send Message
-            </button>
-            {status && <p className="mt-4 text-sm text-slate-600 dark:text-slate-300">{status}</p>}
-          </motion.form>
+
+            <div className="mt-6 flex flex-wrap gap-3 text-sm text-slate-600 dark:text-slate-300">
+              <span className="rounded-full bg-cyan-50 px-3 py-1 dark:bg-cyan-500/10">Fast response</span>
+              <span className="rounded-full bg-cyan-50 px-3 py-1 dark:bg-cyan-500/10">Remote friendly</span>
+              <span className="rounded-full bg-cyan-50 px-3 py-1 dark:bg-cyan-500/10">Open to new projects</span>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
