@@ -1,6 +1,3 @@
-// Hero section for the homepage with headline and call-to-action.
-
-
 import { motion } from 'framer-motion';
 import { FiArrowRight } from 'react-icons/fi';
 import SocialLinks from './SocialLinks';
@@ -32,12 +29,7 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.2 }} className="relative mx-auto w-full max-w-md">
-          <div className="absolute inset-0 -translate-y-3 rounded-4xl bg-linear-to-br from-cyan-500/30 to-blue-600/30 blur-3xl" />
-          <div className="relative overflow-hidden rounded-4xl border border-white/30 bg-white/60 p-3 shadow-2xl backdrop-blur-xl dark:bg-slate-900/70">
-            <img src={imgProfile} alt="Portrait" className="h-120 w-full rounded-3xl object-cover" />
-          </div>
-        </motion.div> */}
+        {}
       </div>
     </section>
   );

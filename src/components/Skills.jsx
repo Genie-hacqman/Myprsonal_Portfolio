@@ -1,6 +1,3 @@
-// Skills section showing a grid of developer skill cards.
-
-
 import { motion } from 'framer-motion';
 import { skills } from '../data/skills';
 import SkillCard from './SkillCard';

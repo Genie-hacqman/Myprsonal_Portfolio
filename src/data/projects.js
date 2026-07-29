@@ -1,11 +1,7 @@
-// Data list of project items used by the projects section.
-
 import imgExpense from '../assets/images/Expense Tracker.png';
 import imgGeneric from '../assets/images/image.jpeg';
 import imgStay from '../assets/images/stay ease.png';
 import imgCarCommerce from '../assets/images/obolocar.png';
-
-// Portfolio projects used throughout the site for the showcase and filtering views.
 
 
 export const projects = [

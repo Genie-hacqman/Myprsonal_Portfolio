@@ -1,11 +1,8 @@
-// Social icons and external link buttons for profiles.
-
-
 import { FiGithub, FiLinkedin, FiInstagram } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const SocialLinks = ({ className = '' }) => {
-  // Centralize the profile links so they can be reused across the navbar and footer.
+  
 
   
   const links = [

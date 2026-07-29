@@ -1,6 +1,3 @@
-// Single skill card component for displaying an icon and label.
-
-
 import { motion } from 'framer-motion';
 
 const SkillCard = ({ skill, iconsOnly = false }) => {
