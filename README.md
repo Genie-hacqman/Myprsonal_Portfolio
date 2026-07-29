@@ -20,6 +20,7 @@ This portfolio is more than a collection of pages; it is a crafted digital intro
 - React Router DOM
 - React Icons
 
+
 ## Project Structure
 
 - src/components — reusable UI sections and layout pieces
