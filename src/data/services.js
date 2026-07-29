@@ -1,6 +1,3 @@
-// Data list of services offered by the developer.
-
-
 export const services = [
   {
     title: 'Product-minded Web Development',

@@ -1,15 +1,8 @@
-// Navbar.jsx renders the top navigation bar and mobile menu state.
-
-
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FiMenu, FiX, FiMoon, FiSun } from 'react-icons/fi';
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
-
-
-  // Track whether the mobile menu is expanded on small screens.
-
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -24,7 +17,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/80 backdrop-blur-xl dark:border-slate-800 dark:bg-slate-950/80">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         
-        {/* Brand logo / title */}
+        {}
 
         <NavLink to="/" className="flex items-center gap-3 text-lg font-semibold tracking-wide text-slate-900 dark:text-white">
           <img src="/icons/logo.png" alt="Genes Creative logo" className="h-10 w-10 rounded-xl bg-slate-100 p-1 dark:bg-slate-800 object-contain" />
@@ -33,7 +26,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           </span>
         </NavLink>
 
-        {/* Desktop navigation links */}
+        {}
 
 
         <div className="hidden items-center gap-8 md:flex">
@@ -53,7 +46,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         <div className="flex items-center gap-3">
 
 
-          {/* Dark mode toggle button */}
+          
 
           <button
             onClick={toggleDarkMode}
@@ -63,7 +56,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             {darkMode ? <FiSun size={18} /> : <FiMoon size={18} />}
           </button>
 
-          {/* Mobile menu button */}
+          
 
 
           <button
@@ -76,7 +69,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         </div>
       </nav>
 
-      {/* Mobile navigation panel shown only when the menu is open. */}
+      
 
 
       {isOpen && (

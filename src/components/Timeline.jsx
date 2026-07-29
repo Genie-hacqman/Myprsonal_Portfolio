@@ -1,5 +1,3 @@
-// Timeline component showing experience or education dates.
-
 import { motion } from 'framer-motion';
 
 const Timeline = ({ items }) => {

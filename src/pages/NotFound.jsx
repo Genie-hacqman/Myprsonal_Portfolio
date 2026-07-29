@@ -1,8 +1,8 @@
-// Fallback page shown for unknown routes.
+
 
 import { Link } from 'react-router-dom';
 
-// NotFound displays a friendly fallback page for invalid routes.
+
 
 const NotFound = () => {
   return (

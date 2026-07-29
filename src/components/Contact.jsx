@@ -1,5 +1,3 @@
-// Contact section with a clean, professional call-to-action.
-
 import { motion } from 'framer-motion';
 import { FiArrowRight, FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
 import SectionTitle from './SectionTitle';

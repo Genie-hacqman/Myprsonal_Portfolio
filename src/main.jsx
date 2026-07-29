@@ -1,4 +1,3 @@
-// Entry point that mounts the React app and loads global styles.
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'

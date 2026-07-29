@@ -1,6 +1,3 @@
-// Heading and subtitle component used for section titles.
-
-
 const SectionTitle = ({ eyebrow, title, description }) => {
   return (
     <div className="max-w-2xl mb-10">

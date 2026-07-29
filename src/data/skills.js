@@ -1,6 +1,3 @@
-// Data list of skill items and icon names for skills display.
-
-
 export const skills = [
   { name: 'React', level: 75, category: 'Frontend', icon: '/icons/react.svg' },
   { name: 'JavaScript', level: 82, category: 'Language', icon: '/icons/javascript.svg' },

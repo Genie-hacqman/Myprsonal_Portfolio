@@ -1,4 +1,4 @@
-// About page content describing the developer and experience.
+
 
 
 import { motion } from 'framer-motion';

@@ -1,4 +1,4 @@
-// Projects page wrapper that renders the project showcase component.
+
 
 
 import { useMemo, useState } from 'react';
@@ -8,11 +8,11 @@ import SectionTitle from '../components/SectionTitle';
 
 const ProjectsPage = () => {
 
-  // Keep track of the selected project category for filtering.
+  
 
   const [filter, setFilter] = useState('All');
 
-  // Build a list of unique categories from the project data.
+  
 
 
   const categories = useMemo(() => ['All', ...new Set(projects.map((project) => project.category))], []);

@@ -1,13 +1,10 @@
-// Reusable CTA button that supports both links and standard buttons.
-
-
 const Button = ({ children, href, variant = 'primary', className = '', ...props }) => {
 
-  // Shared styling for all button variants so the component stays consistent.
+  
 
   const baseClass = 'inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition-all duration-300';
   
-  // Available visual styles for the button.
+  
 
 
   const variants = {
