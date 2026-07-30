@@ -1,6 +1,3 @@
-
-
-
 import { motion } from 'framer-motion';
 import { FiDownload } from 'react-icons/fi';
 import SectionTitle from '../components/SectionTitle';

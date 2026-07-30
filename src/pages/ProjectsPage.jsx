@@ -1,20 +1,10 @@
-
-
-
 import { useMemo, useState } from 'react';
 import { projects } from '../data/projects';
 import ProjectCard from '../components/ProjectCard';
 import SectionTitle from '../components/SectionTitle';
 
 const ProjectsPage = () => {
-
-  
-
   const [filter, setFilter] = useState('All');
-
-  
-
-
   const categories = useMemo(() => ['All', ...new Set(projects.map((project) => project.category))], []);
   const filteredProjects = useMemo(() => {
     if (filter === 'All') return projects;

@@ -3,8 +3,6 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 const SocialLinks = ({ className = '' }) => {
   
-
-  
   const links = [
     { label: 'GitHub', icon: <FiGithub size={20} />, href: 'https://github.com/Genie-hacqman' },
     { label: 'LinkedIn', icon: <FiLinkedin size={20} />, href: 'https://www.linkedin.com/in/hackmankofiagyemang' },
