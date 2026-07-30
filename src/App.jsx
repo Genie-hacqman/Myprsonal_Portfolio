@@ -10,9 +10,7 @@ import NotFound from './pages/NotFound';
 function App() {
 
   const [darkMode, setDarkMode] = useState(false);
-
-  
-  useEffect(() => {
+    useEffect(() => {
     document.documentElement.classList.toggle('dark', darkMode);
   }, [darkMode]);
 
