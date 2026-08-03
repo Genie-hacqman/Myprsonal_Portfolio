@@ -1,5 +1,5 @@
 import imgExpense from '../assets/images/Expense Tracker.png';
-import imgGeneric from '../assets/images/image.jpeg';
+import imgWalletTracker from '../assets/images/Wallet-Tracker.png';
 import imgStay from '../assets/images/stay ease.png';
 import imgCarCommerce from '../assets/images/obolocar.png';
 import imgWeather from '../assets/images/weather.png';
@@ -13,7 +13,7 @@ export const projects = [
     techStack: ['python', 'pyinstaller', 'json'],
     github: 'https://github.com/Genie-hacqman/expense-tracker',
     liveDemo: 'https://example.com',
-    category: 'App',
+    category: 'desktop App',
   },
   {
     title: 'StayEaseHotel website',
@@ -40,8 +40,25 @@ export const projects = [
     image: imgWeather,
     techStack: ['React', 'Tailwind CSS', 'OpenWeatherMap API'],
     github: 'https://github.com/Genie-hacqman/WeatherApp',
-    liveDemo: 'https://example.com',
+    liveDemo: 'https://weather-app-topaz-theta-86.vercel.app/',
     category: 'website',
+  },
+
+  { 
+    title: 'Wallet Tracker',
+    description: 'A personal finance dashboard designed to make budgeting feel less stressful and more understandable.',
+    image: imgWalletTracker,
+    techStack: ['React', 'Tailwind CSS', 'shadcn-ui'],
+    github: 'https://github.com/Genie-hacqman/wallet-Tracker-sys',
+    liveDemo: 'https://example.com',
+    category: 'In Progress',
   }
+
+
+
+
+
+
+
 
 ];
