@@ -25,7 +25,7 @@ const SkillCard = ({ skill, iconsOnly = false }) => {
         <span className="text-sm font-medium text-cyan-500">{skill.level}%</span>
       </div>
       <div className="mt-4 h-2 rounded-full bg-slate-200 dark:bg-slate-800">
-        <div className="h-2 rounded-full bg-linear-to-r from-cyan-500 to-blue-600" style={{ width: `${skill.level}%` }} />
+        <div className="h-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600" style={{ width: `${skill.level}%` }} />
       </div>
       <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">{skill.category}</p>
     </motion.div>

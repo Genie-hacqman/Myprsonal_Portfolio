@@ -22,7 +22,7 @@ const Contact = () => {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="rounded-3xl border border-slate-200 bg-linear-to-br from-cyan-500 to-blue-600 p-8 text-white shadow-xl"
+            className="rounded-3xl border border-slate-200 bg-gradient-to-br from-cyan-500 to-blue-600 p-8 text-white shadow-xl"
           >
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-100">Available now</p>
             <h3 className="mt-3 text-2xl font-semibold">Ready to build something meaningful?</h3>
@@ -54,7 +54,7 @@ const Contact = () => {
                   href={whatsappBaseUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center justify-between rounded-2xl bg-linear-to-r from-cyan-500 to-blue-600 px-4 py-4 text-white shadow-lg shadow-cyan-500/20 transition hover:-translate-y-1"
+                  className="flex items-center justify-between rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-4 text-white shadow-lg shadow-cyan-500/20 transition hover:-translate-y-1"
                 >
                   <span className="font-medium">Message on WhatsApp</span>
                   <FiArrowRight size={18} />

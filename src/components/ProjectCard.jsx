@@ -15,7 +15,7 @@ const ProjectCard = ({ project }) => {
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ duration: 0.7, ease: [0.175, 0.885, 0.32, 1.275] }}
         style={{ transformStyle: 'preserve-3d', touchAction: 'manipulation' }}
-        className="relative h-full min-h-112 cursor-pointer sm:min-h-120"
+        className="relative h-full min-h-88 cursor-pointer sm:min-h-140"
         onTap={toggleCard}
         onKeyDown={(event) => {
           if (event.key === 'Enter' || event.key === ' ') {
@@ -32,9 +32,9 @@ const ProjectCard = ({ project }) => {
           className="absolute inset-0 flex flex-col overflow-visible rounded-[20px] bg-[#1b233d] p-1.25 shadow-[0_7px_20px_rgba(100,100,111,0.2)]"
           style={{ backfaceVisibility: 'hidden' }}
         >
-          <div className="relative h-37.5 overflow-hidden rounded-[15px] bg-[linear-gradient(45deg,#049fbb_0%,#50f6ff_100%)]">
+          <div className="relative h-38 overflow-hidden rounded-[15px] bg-[linear-gradient(45deg,#049fbb_0%,#50f6ff_100%)]">
             <div className="absolute left-0 top-0 h-7.5 w-32.5 rounded-br-[10px] bg-[#1b233d] skew-x-40 shadow-[-10px_-10px_0_0_#1b233d]" />
-            <div className="absolute left-0 top-7.5] h-3.75 w-3.75 rounded-tl-[15px] shadow-[-5px_-5px_0_2px_#1b233d]" />
+            <div className="absolute left-0 top-7.5 h-3.75 w-3.75rounded-tl-[15px] shadow-[-5px_-5px_0_2px_#1b233d]" />
             <div className="absolute top-0 left-0 z-20 flex h-7.5 w-full items-center justify-between px-3.75">
               <div className="z-10 flex h-full items-center justify-center rounded-full border border-cyan-300/40 bg-[#07111f]/95 px-3 py-1 text-sm font-black tracking-[0.2em] text-[#f8fbff] shadow-[0_0_18px_rgba(0,0,0,0.35)] backdrop-blur-md">
                 {project.category}
@@ -48,7 +48,7 @@ const ProjectCard = ({ project }) => {
                 </a>
               </div>
             </div>
-            <img src={project.image} alt={project.title} className="absolute inset-x-0 bottom-0 h-21.25 w-full object-cover opacity-90" />
+            <img src={project.image} alt={project.title} className="absolute inset-x-0 bottom-0 h-21.5 w-full object-cover opacity-90" />
           </div>
 
           <div className="mt-3.75 flex-1 rounded-[15px] bg-[#142039] p-[10px_5px_15px] text-center">
