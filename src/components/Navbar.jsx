@@ -27,8 +27,6 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         </NavLink>
 
         {}
-
-
         <div className="hidden items-center gap-8 md:flex">
           {links.map((link) => (
             <NavLink
@@ -42,11 +40,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             </NavLink>
           ))}
         </div>
-
         <div className="flex items-center gap-3">
-
-
-          
 
           <button
             onClick={toggleDarkMode}
@@ -55,9 +49,6 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           >
             {darkMode ? <FiSun size={18} /> : <FiMoon size={18} />}
           </button>
-
-          
-
 
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -68,9 +59,6 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           </button>
         </div>
       </nav>
-
-      
-
 
       {isOpen && (
         <div className="border-t border-slate-200 bg-white px-4 py-4 dark:border-slate-800 dark:bg-slate-950 md:hidden">

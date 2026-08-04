@@ -69,7 +69,6 @@ const Contact = () => {
                 </a>
               </div>
             </div>
-
             <div className="mt-6 flex flex-wrap gap-3 text-sm text-slate-600 dark:text-slate-300">
               <span className="rounded-full bg-cyan-50 px-3 py-1 dark:bg-cyan-500/10">Fast response</span>
               <span className="rounded-full bg-cyan-50 px-3 py-1 dark:bg-cyan-500/10">Remote friendly</span>

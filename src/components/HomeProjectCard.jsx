@@ -15,7 +15,7 @@ const HomeProjectCard = ({ project }) => {
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ duration: 0.7, ease: [0.175, 0.885, 0.32, 1.275] }}
         style={{ transformStyle: 'preserve-3d', touchAction: 'manipulation' }}
-        className="relative h-full min-h-[20rem] cursor-pointer sm:min-h-[21rem] lg:min-h-[20.5rem]"
+        className="relative h-full min-h-80 cursor-pointer sm:min-h-84 lg:min-h-82"
         onTap={toggleCard}
         onKeyDown={(event) => {
           if (event.key === 'Enter' || event.key === ' ') {
@@ -32,7 +32,7 @@ const HomeProjectCard = ({ project }) => {
           style={{ backfaceVisibility: 'hidden' }}
         >
           <div className="relative h-28 overflow-hidden rounded-[14px] bg-[linear-gradient(45deg,#049fbb_0%,#50f6ff_100%)]">
-            <div className="absolute left-0 top-0 h-6.5 w-28 rounded-br-[8px] bg-[#1b233d] skew-x-40 shadow-[-8px_-8px_0_0_#1b233d]" />
+            <div className="absolute left-0 top-0 h-6.5 w-28 rounded-br-lg bg-[#1b233d] skew-x-40 shadow-[-8px_-8px_0_0_#1b233d]" />
             <div className="absolute left-0 top-6.5 h-3.25 w-3.25 rounded-tl-[14px] shadow-[-5px_-5px_0_2px_#1b233d]" />
             <div className="absolute top-0 left-0 z-20 flex h-6.5 w-full items-center justify-between px-3">
               <div className="z-10 flex h-full items-center justify-center rounded-full border border-cyan-300/40 bg-[#07111f]/95 px-2.5 py-1 text-[11px] font-black tracking-[0.2em] text-[#f8fbff] shadow-[0_0_14px_rgba(0,0,0,0.35)] backdrop-blur-md">
@@ -60,11 +60,11 @@ const HomeProjectCard = ({ project }) => {
             </p>
 
             <div className="mt-2.5 flex flex-col gap-2 text-[10px] leading-5 text-slate-200">
-              <div className="rounded-[8px] bg-white/8 px-2 py-2">
+              <div className="rounded-lg bg-white/8 px-2 py-2">
                 <span className="block text-[11px] font-semibold text-white">Stack</span>
                 <span className="block">{project.techStack.join(', ')}</span>
               </div>
-              <div className="rounded-[8px] border border-cyan-400/20 bg-[#0f172a]/95 px-2 py-2 shadow-[0_0_12px_rgba(0,0,0,0.25)]">
+              <div className="rounded-lg border border-cyan-400/20 bg-[#0f172a]/95 px-2 py-2 shadow-[0_0_12px_rgba(0,0,0,0.25)]">
                 <span className="block text-[11px] font-semibold text-cyan-200">Category</span>
                 <span className="mt-1 block font-semibold text-[#f8fbff]">{project.category}</span>
               </div>
