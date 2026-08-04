@@ -2,8 +2,10 @@ import { motion } from 'framer-motion';
 import { FiArrowRight, FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
 import SectionTitle from './SectionTitle';
 
-const whatsappNumber = '233549701424';
-const whatsappBaseUrl = `https://wa.me/${whatsappNumber}`;
+const decodeBase64 = (value) => atob(value);
+
+const whatsappBaseUrl = decodeBase64('aHR0cHM6Ly93YS5tZS8yMzM1NDk3MDE0MjQ=');
+const emailLink = decodeBase64('bWFpbHRvOm1pcnRoZnVsbWlja2doMTJAZ21haWwuY29t');
 
 const Contact = () => {
   return (
@@ -29,9 +31,9 @@ const Contact = () => {
             </p>
 
             <div className="mt-8 space-y-4 text-sm">
-              <div className="flex items-center gap-3"><FiMail size={18} /> <span>mirthfulmickgh12@gmail.com</span></div>
+              <div className="flex items-center gap-3"><FiMail size={18} /> <span>""</span></div>
               <a href={whatsappBaseUrl} target="_blank" rel="noreferrer" className="flex items-center gap-3 transition hover:opacity-90">
-                <FiPhone size={18} /> <span>+233 549 7014 24</span>
+                <FiPhone size={18} /> <span>""</span>
               </a>
               <div className="flex items-center gap-3"><FiMapPin size={18} /> <span>Accra, Ghana</span></div>
             </div>
@@ -59,7 +61,7 @@ const Contact = () => {
                 </a>
 
                 <a
-                  href="mailto:mirthfulmickgh12@gmail.com"
+                  href={emailLink}
                   className="flex items-center justify-between rounded-2xl border border-slate-200 px-4 py-4 text-slate-700 transition hover:border-cyan-400 hover:text-cyan-600 dark:border-slate-700 dark:text-slate-200"
                 >
                   <span className="font-medium">Send an email</span>
