@@ -8,7 +8,7 @@ const About = () => {
     <section id="about" className="px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
         <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="rounded-3xl border border-slate-200 bg-white/70 p-6 shadow-lg dark:border-slate-800 dark:bg-slate-900/70">
-          <img src={imgProfile} alt="Profile" className="h-80 w-full rounded-2xl object-cover" />
+          <img src={imgProfile} alt="Profile" className="h-auto w-full rounded-2xl object-cover" />
         </motion.div>
         
         <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
