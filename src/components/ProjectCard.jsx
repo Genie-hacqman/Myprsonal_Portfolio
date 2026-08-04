@@ -15,7 +15,7 @@ const ProjectCard = ({ project }) => {
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ duration: 0.7, ease: [0.175, 0.885, 0.32, 1.275] }}
         style={{ transformStyle: 'preserve-3d', touchAction: 'manipulation' }}
-        className="relative h-full min-h-[28rem] cursor-pointer sm:min-h-[30rem]"
+        className="relative h-full min-h-112 cursor-pointer sm:min-h-120"
         onTap={toggleCard}
         onKeyDown={(event) => {
           if (event.key === 'Enter' || event.key === ' ') {
