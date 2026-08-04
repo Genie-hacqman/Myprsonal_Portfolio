@@ -4,12 +4,8 @@ import HomeProjectCard from './HomeProjectCard';
 import SectionTitle from './SectionTitle';
 
 const Projects = () => {
-
   const [filter, setFilter] = useState('All');
-
-
   const categories = useMemo(() => ['All', ...new Set(projects.map((project) => project.category))], []);
-
   const filteredProjects = useMemo(() => {
     if (filter === 'All') return projects;
     return projects.filter((project) => project.category === filter);
@@ -20,12 +16,9 @@ const Projects = () => {
       <div className="mx-auto max-w-6xl">
         {}
 
-
         <SectionTitle eyebrow="Projects" title="Selected work" description="A mix of polished product experiences and experimental interfaces created with modern frontend tools." />
 
         {}
-
-
         <div className="mb-8 flex flex-wrap gap-3">
           {categories.map((category) => (
             <button

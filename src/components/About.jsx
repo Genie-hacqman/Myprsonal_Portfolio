@@ -11,7 +11,6 @@ const About = () => {
           <img src={imgProfile} alt="Profile" className="h-80 w-full rounded-2xl object-cover" />
         </motion.div>
         
-
         <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
           <SectionTitle eyebrow="About Me" title="Crafting thoughtful digital experiences" description="I’m drawn to the quiet details that make a product feel effortless, useful, and genuinely human." />
           <p className="text-lg leading-8 text-slate-600 dark:text-slate-300">
