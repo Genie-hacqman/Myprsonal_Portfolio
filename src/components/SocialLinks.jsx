@@ -1,13 +1,15 @@
 import { FiGithub, FiLinkedin, FiInstagram } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 
+const decodeBase64 = (value) => atob(value);
+
 const SocialLinks = ({ className = '' }) => {
   
   const links = [
-    { label: 'GitHub', icon: <FiGithub size={20} />, href: 'https://github.com/Genie-hacqman' },
-    { label: 'LinkedIn', icon: <FiLinkedin size={20} />, href: 'https://www.linkedin.com/in/hackmankofiagyemang' },
-    { label: 'Instagram', icon: <FiInstagram size={20} />, href: 'https://instagram.com' },
-    { label: 'WhatsApp', icon: <FaWhatsapp size={20} />, href: 'https://wa.me/0549701424' }
+    { label: 'GitHub', icon: <FiGithub size={20} />, href: decodeBase64('aHR0cHM6Ly9naXRodWIuY29tL0dlbmllLWhhY3FtYW4=') },
+    { label: 'LinkedIn', icon: <FiLinkedin size={20} />, href: decodeBase64('aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL2hhY2ttYW5rb2ZpYWd5ZW1hbmc=') },
+    { label: 'Instagram', icon: <FiInstagram size={20} />, href: decodeBase64('aHR0cHM6Ly9pbnN0YWdyYW0uY29t') },
+    { label: 'WhatsApp', icon: <FaWhatsapp size={20} />, href: decodeBase64('aHR0cHM6Ly93YS5tZS8wNTQ5NzAxNDI0') }
   ];
 
   return (

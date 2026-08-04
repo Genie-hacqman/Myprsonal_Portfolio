@@ -15,7 +15,7 @@ const ProjectCard = ({ project }) => {
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ duration: 0.7, ease: [0.175, 0.885, 0.32, 1.275] }}
         style={{ transformStyle: 'preserve-3d', touchAction: 'manipulation' }}
-        className="relative h-full min-h-112 cursor-pointer sm:min-h-120"
+        className="relative h-full min-h-[28rem] cursor-pointer sm:min-h-[30rem]"
         onTap={toggleCard}
         onKeyDown={(event) => {
           if (event.key === 'Enter' || event.key === ' ') {
@@ -29,7 +29,7 @@ const ProjectCard = ({ project }) => {
       >
         {}
         <div
-          className="absolute inset-0 overflow-hidden rounded-[20px] bg-[#1b233d] p-1.25 shadow-[0_7px_20px_rgba(100,100,111,0.2)]"
+          className="absolute inset-0 flex flex-col overflow-visible rounded-[20px] bg-[#1b233d] p-1.25 shadow-[0_7px_20px_rgba(100,100,111,0.2)]"
           style={{ backfaceVisibility: 'hidden' }}
         >
           <div className="relative h-37.5 overflow-hidden rounded-[15px] bg-[linear-gradient(45deg,#049fbb_0%,#50f6ff_100%)]">
@@ -51,9 +51,14 @@ const ProjectCard = ({ project }) => {
             <img src={project.image} alt={project.title} className="absolute inset-x-0 bottom-0 h-21.25 w-full object-cover opacity-90" />
           </div>
 
-          <div className="mt-3.75 rounded-[15px] bg-[#142039] p-[10px_5px_15px] text-center">
+          <div className="mt-3.75 flex-1 rounded-[15px] bg-[#142039] p-[10px_5px_15px] text-center">
             <span className="block text-[20px] font-extrabold uppercase tracking-[2px] text-white">{project.title}</span>
-            <p className="mt-3 text-[15px] leading-6 text-slate-100">{project.description}</p>
+            <p
+              className="mt-3 text-[15px] leading-6 text-slate-100"
+              style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', minHeight: '3.5rem' }}
+            >
+              {project.description}
+            </p>
 
             <div className="mt-5 flex flex-col gap-3 text-[11px] leading-6 text-slate-200">
               <div className="rounded-[10px] bg-white/8 px-2 py-2">
@@ -70,12 +75,17 @@ const ProjectCard = ({ project }) => {
 
         {}
         <div
-          className="absolute inset-0 overflow-hidden rounded-[20px] bg-[#10172a] p-1.25 shadow-[0_7px_20px_rgba(100,100,111,0.2)]"
+          className="absolute inset-0 overflow-visible rounded-[20px] bg-[#10172a] p-1.25 shadow-[0_7px_20px_rgba(100,100,111,0.2)]"
           style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
         >
           <div className="relative h-full rounded-[15px] border border-white/10 bg-[#131b2f] p-5 text-white">
             <span className="block text-[20px] font-bold uppercase tracking-[1px] text-cyan-300">{project.title}</span>
-            <p className="mt-4 text-base leading-7 text-slate-100">{project.description}</p>
+            <p
+              className="mt-4 text-base leading-7 text-slate-100"
+              style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', minHeight: '3.5rem' }}
+            >
+              {project.description}
+            </p>
             <div className="mt-6 space-y-4 text-base text-slate-100">
               <div className="rounded-xl border border-white/10 bg-slate-800/80 p-3">
                 <span className="block text-[12px] uppercase tracking-[0.2em] text-cyan-200">Tech Stack</span>

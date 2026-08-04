@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { projects } from '../data/projects';
-import ProjectCard from './ProjectCard';
+import HomeProjectCard from './HomeProjectCard';
 import SectionTitle from './SectionTitle';
 
 const Projects = () => {
@@ -17,7 +17,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="px-4 py-20 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-6xl">
         {}
 
 
@@ -38,9 +38,9 @@ const Projects = () => {
           ))}
         </div>
 
-        <div className="grid items-stretch gap-8 md:grid-cols-2">
+        <div className="grid items-stretch gap-3 md:grid-cols-2 xl:grid-cols-3">
           {filteredProjects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
+            <HomeProjectCard key={project.title} project={project} />
           ))}
         </div>
       </div>
