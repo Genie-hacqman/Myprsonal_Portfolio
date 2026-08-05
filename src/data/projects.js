@@ -8,7 +8,7 @@ import imgWeather from '../assets/images/weather.png';
 export const projects = [
   {
     title: 'Expense Tracker',
-    description: 'A personal finance dashboard designed to make budgeting feel less stressful and more understandable.',
+    description: 'A simple desktop app for tracking expenses and budgets.',
     image: imgExpense,
     techStack: ['python', 'pyinstaller', 'json'],
     github: 'https://github.com/Genie-hacqman/expense-tracker',
@@ -17,7 +17,7 @@ export const projects = [
   },
   {
     title: 'StayEaseHotel website',
-    description: 'A warm, modern hospitality landing page crafted with calm visuals and smooth storytelling.',
+    description: 'A clean hotel landing page designed for easy booking.',
     image: imgStay,
     techStack: ['React', 'TypeScript', 'Tailwind'],
     github: 'https://github.com/Genie-hacqman/stay-ease',
@@ -26,7 +26,7 @@ export const projects = [
   },
   {
     title: 'Obolo Automobile',
-    description: 'A project I’m currently building, focused on creating a polished automotive storefront experience with clarity, elegance, and easy browsing.',
+    description: 'A modern car showroom site for browsing vehicles quickly.',
     image: imgCarCommerce,
     techStack: ['React.js', 'Tailwind', 'Vite'],
     github: 'https://github.com/Genie-hacqman/AutoMobile-showroom',
@@ -36,7 +36,7 @@ export const projects = [
 
   {
     title: 'Weather App',
-    description: 'A simple weather application that displays current conditions and forecasts for any location.',
+    description: 'A simple weather dashboard showing current conditions and forecasts.',
     image: imgWeather,
     techStack: ['React', 'Tailwind CSS', 'OpenWeatherMap API'],
     github: 'https://github.com/Genie-hacqman/WeatherApp',
@@ -44,9 +44,9 @@ export const projects = [
     category: 'website',
   },
 
-  { 
+  {
     title: 'Wallet Tracker',
-    description: 'A personal finance dashboard designed to make budgeting feel less stressful and more understandable.',
+    description: 'A simple app for tracking wallet spending and budgets.',
     image: imgWalletTracker,
     techStack: ['React', 'Tailwind CSS', 'shadcn-ui'],
     github: 'https://github.com/Genie-hacqman/wallet-Tracker-sys',

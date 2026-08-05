@@ -6,10 +6,10 @@ export const experience = [
     description: 'Leading the development of responsive and accessible frontend applications.',
   },
   {
-    company: 'Freelance',
-    role: 'Full-Stack Developer',
-    period: '2020 - Present',
-    description: 'Designing and implementing robust full-stack solutions.',
+    company: "Genie's Tech Solutions",
+    role: "Full-Stack Developer",
+    period: "2020 - Present",
+    description: "Designing and implementing robust full-stack solutions.",
   },
   {
     company: 'Kaths',
