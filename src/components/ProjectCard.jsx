@@ -37,9 +37,9 @@ const ProjectCard = ({ project }) => {
   const toggleCard = () => setIsFlipped((prev) => !prev);
 
   return (
-    <div className="min-h-[25rem] sm:min-h-[26.5rem] w-full perspective-[1000px]">
+    <div className="min-h-88 w-full overflow-hidden perspective-[1000px] sm:min-h-96 md:min-h-100">
       <motion.div
-        whileHover={{ rotateY: 180, y: -6, boxShadow: '0px 22px 45px rgba(0,0,0,0.18)' }}
+        whileHover={{ y: -6, boxShadow: '0px 22px 45px rgba(0,0,0,0.18)' }}
         whileTap={{ scale: 0.98 }}
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ duration: 0.7, ease: [0.175, 0.885, 0.32, 1.275] }}
@@ -57,10 +57,10 @@ const ProjectCard = ({ project }) => {
         aria-label={`Toggle details for ${project.title}`}
       >
         <div
-          className="absolute inset-0 flex flex-col overflow-visible rounded-[20px] bg-[#1b233d] p-1 shadow-[0_7px_20px_rgba(100,100,111,0.2)]"
+          className="absolute inset-0 flex flex-col overflow-hidden rounded-[20px] bg-[#1b233d] p-1 shadow-[0_7px_20px_rgba(100,100,111,0.2)]"
           style={{ backfaceVisibility: 'hidden' }}
         >
-          <div className="relative h-36 overflow-hidden rounded-[15px] bg-[linear-gradient(45deg,#049fbb_0%,#50f6ff_100%)]">
+          <div className="relative h-32 overflow-hidden rounded-[15px] bg-[linear-gradient(45deg,#049fbb_0%,#50f6ff_100%)] sm:h-36">
             <div className="absolute left-0 top-0 h-7.5 w-32.5 rounded-br-[10px] bg-[#1b233d] skew-x-40 shadow-[-10px_-10px_0_0_#1b233d]" />
             <div className="absolute left-0 top-7.5 h-3.75 w-3.75 rounded-tl-[15px] shadow-[-5px_-5px_0_2px_#1b233d]" />
             <div className="absolute top-0 left-0 z-20 flex h-7.5 w-full items-center justify-between px-3">
@@ -76,19 +76,19 @@ const ProjectCard = ({ project }) => {
                 </a>
               </div>
             </div>
-            <img src={project.image} alt={project.title} className="absolute inset-x-0 bottom-0 h-[5.75rem] w-full object-cover opacity-90 transition-transform duration-500 ease-out group-hover:scale-105" />
+            <img src={project.image} alt={project.title} className="absolute inset-x-0 bottom-0 h-23 w-full object-cover opacity-90 transition-transform duration-500 ease-out group-hover:scale-105" />
           </div>
 
-          <div className="mt-3 flex-1 rounded-[15px] bg-[#142039] p-[9px_5px_13px] text-center">
-            <span className="block text-[18px] font-extrabold uppercase tracking-[2px] text-white">{project.title}</span>
+          <div className="mt-3 flex-1 rounded-[15px] bg-[#142039] p-4 text-center">
+            <span className="block text-base font-extrabold uppercase tracking-[1px] text-white sm:text-lg">{project.title}</span>
             <p
-              className="mt-2.5 text-[14px] leading-6 text-slate-100"
+              className="mt-2.5 text-sm leading-6 text-slate-100"
               style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', minHeight: '3rem' }}
             >
               {project.description}
             </p>
 
-            <div className="mt-4 flex flex-col gap-2.5 text-[10px] leading-6 text-slate-200">
+            <div className="mt-4 flex flex-col gap-3 text-xs leading-6 text-slate-200 sm:text-[0.85rem]">
               <div className="rounded-[10px] bg-white/8 px-2 py-1.5">
                 <span className="block text-[13px] font-semibold text-white">Stack</span>
                 <div className="mt-1 flex flex-wrap justify-center gap-1">
@@ -108,14 +108,14 @@ const ProjectCard = ({ project }) => {
         </div>
 
         <div
-          className="absolute inset-0 overflow-visible rounded-[20px] bg-[#10172a] p-1 shadow-[0_7px_20px_rgba(100,100,111,0.2)]"
+          className="absolute inset-0 overflow-hidden rounded-[20px] bg-[#10172a] p-1 shadow-[0_7px_20px_rgba(100,100,111,0.2)]"
           style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
         >
-          <div className="relative h-full rounded-[15px] border border-white/10 bg-[#131b2f] p-4.5 text-white">
-            <span className="block text-[18px] font-bold uppercase tracking-[1px] text-cyan-300">{project.title}</span>
+          <div className="relative h-full rounded-[15px] border border-white/10 bg-[#131b2f] p-4 text-white">
+            <span className="block text-base font-bold uppercase tracking-[1px] text-cyan-300 sm:text-[1.05rem]">{project.title}</span>
             <p
-              className="mt-3.5 text-sm leading-7 text-slate-100"
-              style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', minHeight: '3.5rem' }}
+              className="mt-3 text-sm leading-6 text-slate-100"
+              style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', minHeight: '3.2rem' }}
             >
               {project.description}
             </p>

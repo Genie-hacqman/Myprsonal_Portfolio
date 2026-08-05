@@ -15,7 +15,7 @@ const HomeProjectCard = ({ project }) => {
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ duration: 0.7, ease: [0.175, 0.885, 0.32, 1.275] }}
         style={{ transformStyle: 'preserve-3d', touchAction: 'manipulation' }}
-        className="relative h-full min-h-[18.5rem] cursor-pointer sm:min-h-[20rem] lg:min-h-[19.5rem] group"
+        className="relative h-full min-h-74 cursor-pointer sm:min-h-80 lg:min-h-78 group"
         onTap={toggleCard}
         onKeyDown={(event) => {
           if (event.key === 'Enter' || event.key === ' ') {
@@ -31,7 +31,7 @@ const HomeProjectCard = ({ project }) => {
           className="absolute inset-0 flex flex-col overflow-visible rounded-[18px] bg-[#1b233d] p-[0.55rem] shadow-[0_6px_18px_rgba(100,100,111,0.2)]"
           style={{ backfaceVisibility: 'hidden' }}
         >
-          <div className="relative h-[7rem] overflow-hidden rounded-[14px] bg-[linear-gradient(45deg,#049fbb_0%,#50f6ff_100%)]">
+          <div className="relative h-28 overflow-hidden rounded-[14px] bg-[linear-gradient(45deg,#049fbb_0%,#50f6ff_100%)]">
             <div className="absolute left-0 top-0 h-6.5 w-28 rounded-br-lg bg-[#1b233d] skew-x-40 shadow-[-8px_-8px_0_0_#1b233d]" />
             <div className="absolute left-0 top-6.5 h-[0.8rem] w-[0.8rem] rounded-tl-[14px] shadow-[-5px_-5px_0_2px_#1b233d]" />
             <div className="absolute top-0 left-0 z-20 flex h-6.5 w-full items-center justify-between px-2.5">
