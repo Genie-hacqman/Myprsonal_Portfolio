@@ -63,7 +63,13 @@ const ProjectCard = ({ project }) => {
             <div className="mt-4 flex flex-col gap-2.5 text-[10px] leading-6 text-slate-200">
               <div className="rounded-[10px] bg-white/8 px-2 py-1.5">
                 <span className="block text-[13px] font-semibold text-white">Stack</span>
-                <span className="block">{project.techStack.join(', ')}</span>
+                <div className="mt-1 flex flex-wrap gap-1">
+                  {project.techStack.map((tech) => (
+                    <span key={tech} className="rounded-full bg-slate-900/70 px-2 py-1 text-[10px] font-medium text-slate-100">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
               <div className="rounded-[10px] border border-cyan-400/20 bg-[#0f172a]/95 px-2 py-1.5 shadow-[0_0_16px_rgba(0,0,0,0.25)]">
                 <span className="block text-[13px] font-semibold text-cyan-200">Category</span>
@@ -89,7 +95,13 @@ const ProjectCard = ({ project }) => {
             <div className="mt-5 space-y-3 text-sm text-slate-100">
               <div className="rounded-xl border border-white/10 bg-slate-800/80 p-2.5">
                 <span className="block text-[11px] uppercase tracking-[0.2em] text-cyan-200">Tech Stack</span>
-                <span className="mt-2 block text-sm">{project.techStack.join(' • ')}</span>
+                <div className="mt-2 flex flex-wrap gap-1">
+                  {project.techStack.map((tech) => (
+                    <span key={tech} className="rounded-full bg-slate-900/70 px-2 py-1 text-sm font-medium text-slate-100">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
               <div className="rounded-xl border border-white/10 bg-slate-800/80 p-2.5">
                 <span className="block text-[13px] uppercase tracking-[0.2em] text-cyan-200">Links</span>
