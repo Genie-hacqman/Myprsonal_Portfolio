@@ -6,7 +6,6 @@ const Footer = () => {
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 md:flex-row">
         <div>
           <p className="font-semibold text-slate-900 dark:text-white">Gene's Creative</p>
-          <p>© 2024 All rights reserved.</p>
         </div>
         <div className="flex items-center gap-4">
           <a href="#top" className="transition hover:text-cyan-500">Back to top</a>

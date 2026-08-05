@@ -8,14 +8,14 @@ const ProjectCard = ({ project }) => {
   const toggleCard = () => setIsFlipped((prev) => !prev);
 
   return (
-    <div className="h-full w-full perspective-[1000px]">
+    <div className="h-88 sm:h-96 w-full perspective-[1000px]">
       <motion.div
         whileHover={{ rotateY: 180 }}
         whileTap={{ scale: 0.98 }}
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ duration: 0.7, ease: [0.175, 0.885, 0.32, 1.275] }}
         style={{ transformStyle: 'preserve-3d', touchAction: 'manipulation' }}
-        className="relative h-full min-h-88 cursor-pointer sm:min-h-140"
+        className="relative h-full cursor-pointer"
         onTap={toggleCard}
         onKeyDown={(event) => {
           if (event.key === 'Enter' || event.key === ' ') {
