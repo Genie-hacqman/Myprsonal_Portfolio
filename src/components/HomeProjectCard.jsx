@@ -10,12 +10,12 @@ const HomeProjectCard = ({ project }) => {
   return (
     <div className="mx-auto h-full w-[90%] max-w-[90%] perspective-[1000px]">
       <motion.div
-        whileHover={{ rotateY: 180 }}
+        whileHover={{ rotateY: 180, y: -6, boxShadow: '0px 22px 45px rgba(0,0,0,0.18)' }}
         whileTap={{ scale: 0.98 }}
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ duration: 0.7, ease: [0.175, 0.885, 0.32, 1.275] }}
         style={{ transformStyle: 'preserve-3d', touchAction: 'manipulation' }}
-        className="relative h-full min-h-[17rem] cursor-pointer sm:min-h-[18.5rem] lg:min-h-[18rem]"
+        className="relative h-full min-h-[18.5rem] cursor-pointer sm:min-h-[20rem] lg:min-h-[19.5rem] group"
         onTap={toggleCard}
         onKeyDown={(event) => {
           if (event.key === 'Enter' || event.key === ' ') {
@@ -31,7 +31,7 @@ const HomeProjectCard = ({ project }) => {
           className="absolute inset-0 flex flex-col overflow-visible rounded-[18px] bg-[#1b233d] p-[0.55rem] shadow-[0_6px_18px_rgba(100,100,111,0.2)]"
           style={{ backfaceVisibility: 'hidden' }}
         >
-          <div className="relative h-24 overflow-hidden rounded-[14px] bg-[linear-gradient(45deg,#049fbb_0%,#50f6ff_100%)]">
+          <div className="relative h-[7rem] overflow-hidden rounded-[14px] bg-[linear-gradient(45deg,#049fbb_0%,#50f6ff_100%)]">
             <div className="absolute left-0 top-0 h-6.5 w-28 rounded-br-lg bg-[#1b233d] skew-x-40 shadow-[-8px_-8px_0_0_#1b233d]" />
             <div className="absolute left-0 top-6.5 h-[0.8rem] w-[0.8rem] rounded-tl-[14px] shadow-[-5px_-5px_0_2px_#1b233d]" />
             <div className="absolute top-0 left-0 z-20 flex h-6.5 w-full items-center justify-between px-2.5">
@@ -47,14 +47,14 @@ const HomeProjectCard = ({ project }) => {
                 </a>
               </div>
             </div>
-            <img src={project.image} alt={project.title} className="absolute inset-x-0 bottom-0 h-12 w-full object-cover opacity-90" />
+            <img src={project.image} alt={project.title} className="absolute inset-x-0 bottom-0 h-14 w-full object-cover opacity-90 transition-transform duration-500 ease-out group-hover:scale-105" />
           </div>
 
-          <div className="mt-2 flex-1 rounded-[13px] bg-[#142039] p-[6px_7px_9px] text-center">
-            <span className="block text-[13px] font-extrabold uppercase tracking-[1.3px] text-white">{project.title}</span>
+          <div className="mt-2.5 flex-1 rounded-[13px] bg-[#142039] p-[7px_8px_10px] text-center">
+            <span className="block text-[14px] font-extrabold uppercase tracking-[1.3px] text-white">{project.title}</span>
             <p
               className="mt-1 text-[11px] leading-5 text-slate-100"
-              style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', minHeight: '2.5rem' }}
+              style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', minHeight: '3rem' }}
             >
               {project.description}
             </p>

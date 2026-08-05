@@ -4,18 +4,47 @@ import { FiExternalLink, FiGithub } from 'react-icons/fi';
 
 const ProjectCard = ({ project }) => {
   const [isFlipped, setIsFlipped] = useState(false);
+  const preferredTechOrder = [
+    'React',
+    'React.js',
+    'TypeScript',
+    'JavaScript',
+    'Tailwind',
+    'Tailwind CSS',
+    'Vite',
+    'shadcn-ui',
+    'OpenWeatherMap API',
+    'python',
+    'pyinstaller',
+    'json',
+  ];
+
+  const orderedTechStack = [...project.techStack].sort((a, b) => {
+    const getIndex = (tech) => {
+      const normalized = tech.toLowerCase();
+      const matchedIndex = preferredTechOrder.findIndex(
+        (item) => item.toLowerCase() === normalized
+      );
+      return matchedIndex === -1 ? preferredTechOrder.length : matchedIndex;
+    };
+
+    const indexA = getIndex(a);
+    const indexB = getIndex(b);
+    if (indexA !== indexB) return indexA - indexB;
+    return a.localeCompare(b, undefined, { sensitivity: 'base' });
+  });
 
   const toggleCard = () => setIsFlipped((prev) => !prev);
 
   return (
-    <div className="h-[22rem] sm:h-[23.5rem] w-full perspective-[1000px]">
+    <div className="min-h-[25rem] sm:min-h-[26.5rem] w-full perspective-[1000px]">
       <motion.div
-        whileHover={{ rotateY: 180 }}
+        whileHover={{ rotateY: 180, y: -6, boxShadow: '0px 22px 45px rgba(0,0,0,0.18)' }}
         whileTap={{ scale: 0.98 }}
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ duration: 0.7, ease: [0.175, 0.885, 0.32, 1.275] }}
         style={{ transformStyle: 'preserve-3d', touchAction: 'manipulation' }}
-        className="relative h-full cursor-pointer"
+        className="relative h-full cursor-pointer group"
         onTap={toggleCard}
         onKeyDown={(event) => {
           if (event.key === 'Enter' || event.key === ' ') {
@@ -27,12 +56,11 @@ const ProjectCard = ({ project }) => {
         tabIndex={0}
         aria-label={`Toggle details for ${project.title}`}
       >
-        {}
         <div
           className="absolute inset-0 flex flex-col overflow-visible rounded-[20px] bg-[#1b233d] p-1 shadow-[0_7px_20px_rgba(100,100,111,0.2)]"
           style={{ backfaceVisibility: 'hidden' }}
         >
-          <div className="relative h-32 overflow-hidden rounded-[15px] bg-[linear-gradient(45deg,#049fbb_0%,#50f6ff_100%)]">
+          <div className="relative h-36 overflow-hidden rounded-[15px] bg-[linear-gradient(45deg,#049fbb_0%,#50f6ff_100%)]">
             <div className="absolute left-0 top-0 h-7.5 w-32.5 rounded-br-[10px] bg-[#1b233d] skew-x-40 shadow-[-10px_-10px_0_0_#1b233d]" />
             <div className="absolute left-0 top-7.5 h-3.75 w-3.75 rounded-tl-[15px] shadow-[-5px_-5px_0_2px_#1b233d]" />
             <div className="absolute top-0 left-0 z-20 flex h-7.5 w-full items-center justify-between px-3">
@@ -48,14 +76,14 @@ const ProjectCard = ({ project }) => {
                 </a>
               </div>
             </div>
-            <img src={project.image} alt={project.title} className="absolute inset-x-0 bottom-0 h-16 w-full object-cover opacity-90" />
+            <img src={project.image} alt={project.title} className="absolute inset-x-0 bottom-0 h-[5.75rem] w-full object-cover opacity-90 transition-transform duration-500 ease-out group-hover:scale-105" />
           </div>
 
           <div className="mt-3 flex-1 rounded-[15px] bg-[#142039] p-[9px_5px_13px] text-center">
             <span className="block text-[18px] font-extrabold uppercase tracking-[2px] text-white">{project.title}</span>
             <p
               className="mt-2.5 text-[14px] leading-6 text-slate-100"
-              style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', minHeight: '3.5rem' }}
+              style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', minHeight: '3rem' }}
             >
               {project.description}
             </p>
@@ -63,8 +91,8 @@ const ProjectCard = ({ project }) => {
             <div className="mt-4 flex flex-col gap-2.5 text-[10px] leading-6 text-slate-200">
               <div className="rounded-[10px] bg-white/8 px-2 py-1.5">
                 <span className="block text-[13px] font-semibold text-white">Stack</span>
-                <div className="mt-1 flex flex-wrap gap-1">
-                  {project.techStack.map((tech) => (
+                <div className="mt-1 flex flex-wrap justify-center gap-1">
+                  {orderedTechStack.map((tech) => (
                     <span key={tech} className="rounded-full bg-slate-900/70 px-2 py-1 text-[10px] font-medium text-slate-100">
                       {tech}
                     </span>
@@ -79,7 +107,6 @@ const ProjectCard = ({ project }) => {
           </div>
         </div>
 
-        {}
         <div
           className="absolute inset-0 overflow-visible rounded-[20px] bg-[#10172a] p-1 shadow-[0_7px_20px_rgba(100,100,111,0.2)]"
           style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
@@ -95,8 +122,8 @@ const ProjectCard = ({ project }) => {
             <div className="mt-5 space-y-3 text-sm text-slate-100">
               <div className="rounded-xl border border-white/10 bg-slate-800/80 p-2.5">
                 <span className="block text-[11px] uppercase tracking-[0.2em] text-cyan-200">Tech Stack</span>
-                <div className="mt-2 flex flex-wrap gap-1">
-                  {project.techStack.map((tech) => (
+                <div className="mt-2 flex flex-wrap justify-center gap-1">
+                  {orderedTechStack.map((tech) => (
                     <span key={tech} className="rounded-full bg-slate-900/70 px-2 py-1 text-sm font-medium text-slate-100">
                       {tech}
                     </span>
