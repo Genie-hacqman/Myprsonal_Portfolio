@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { motion } from 'framer-motion';
 import { projects } from '../data/projects';
 import HomeProjectCard from './HomeProjectCard';
 import SectionTitle from './SectionTitle';
@@ -32,8 +33,16 @@ const Projects = () => {
         </div>
 
         <div className="grid items-stretch gap-3 md:grid-cols-2 xl:grid-cols-3">
-          {filteredProjects.map((project) => (
-            <HomeProjectCard key={project.title} project={project} />
+          {filteredProjects.map((project, idx) => (
+            <motion.div
+              key={project.title}
+              initial={{ opacity: 0, x: idx % 2 === 0 ? -40 : 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <HomeProjectCard project={project} />
+            </motion.div>
           ))}
         </div>
       </div>

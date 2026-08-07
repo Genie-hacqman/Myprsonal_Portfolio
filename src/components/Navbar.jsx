@@ -20,9 +20,9 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         {}
 
         <NavLink to="/" className="flex items-center gap-3 text-lg font-semibold tracking-wide text-slate-900 dark:text-white">
-          <img src="/icons/logo.png" alt="Genes Creative logo" className="h-10 w-10 rounded-xl bg-slate-100 p-1 dark:bg-slate-800 object-contain" />
+          <img src="/icons/logo.png" alt="GenIe's Creative logo" className="h-10 w-10 rounded-xl bg-slate-100 p-1 dark:bg-slate-800 object-contain" />
           <span>
-            Genes<span className="text-cyan-500"> Creative</span>
+            GEnIe's<span className="text-cyan-500"> CrEAtiVe</span>
           </span>
         </NavLink>
 
