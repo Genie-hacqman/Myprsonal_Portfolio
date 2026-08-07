@@ -10,7 +10,13 @@ const Skills = () => {
         <SectionTitle eyebrow="Skills" title="Core tools I work with" description="A blend of modern frontend technologies and development practices that help me ship quickly and thoughtfully." />
         <div className="grid gap-6 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6">
           {skills.map((skill, index) => (
-            <motion.div key={skill.name} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.03 }}>
+            <motion.div
+              key={skill.name}
+              initial={{ opacity: 0, scale: 0.92 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.03 }}
+            >
               <SkillCard skill={skill} iconsOnly />
             </motion.div>
           ))}

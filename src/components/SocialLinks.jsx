@@ -20,7 +20,7 @@ const SocialLinks = ({ className = '' }) => {
           href={link.href}
           target="_blank"
           rel="noreferrer"
-          className="rounded-full border border-slate-300 p-3 text-slate-700 transition hover:-translate-y-1 hover:bg-cyan-500 hover:text-white dark:border-slate-700 dark:text-slate-200"
+          className="social-icon rounded-full border border-slate-300 p-3 text-slate-700 transition-transform duration-300 hover:bg-cyan-500 hover:text-white dark:border-slate-700 dark:text-slate-200"
         >
           {link.icon}
         </a>
