@@ -25,12 +25,22 @@ const revealFade = {
   show: { opacity: 1, transition: { duration: 0.45 } },
 };
 
+const orbitTech = [
+  { name: 'React', icon: '/icons/react.svg', tooltip: 'React SPA + component-driven UIs' },
+  { name: 'JavaScript', icon: '/icons/javascript.svg', tooltip: 'Modern web interactions and logic' },
+  { name: 'Tailwind CSS', icon: '/icons/tailwindcss.svg', tooltip: 'Responsive UI and polished layouts' },
+  { name: 'Node.js', icon: '/icons/nodejs.svg', tooltip: 'APIs, tooling, and server-side workflows' },
+  { name: 'GitHub', icon: '/icons/github.svg', tooltip: 'Version control, branches, and deployments' },
+  { name: 'Docker', icon: '/icons/docker.svg', tooltip: 'Containerized development and deploys' },
+];
+
+const orbitRadius = 118;
+
 const Hero = () => {
   const glowRef = useRef(null);
 
   useEffect(() => {
     const el = glowRef.current;
-    if (!el) return;
     let tx = window.innerWidth / 2;
     let ty = window.innerHeight / 2;
     let x = tx;
@@ -40,14 +50,16 @@ const Hero = () => {
     function onMove(e) {
       tx = e.clientX;
       ty = e.clientY;
-      el.style.opacity = '0.07';
+      if (el) el.style.opacity = '0.07';
     }
 
     function animate() {
       x += (tx - x) * 0.14;
       y += (ty - y) * 0.14;
-      el.style.left = `${Math.round(x)}px`;
-      el.style.top = `${Math.round(y)}px`;
+      if (el) {
+        el.style.left = `${Math.round(x)}px`;
+        el.style.top = `${Math.round(y)}px`;
+      }
       rafId = requestAnimationFrame(animate);
     }
 
@@ -55,7 +67,7 @@ const Hero = () => {
     rafId = requestAnimationFrame(animate);
 
     function onLeave() {
-      el.style.opacity = '0';
+      if (el) el.style.opacity = '0';
     }
     window.addEventListener('mouseout', onLeave);
 
@@ -108,8 +120,32 @@ const Hero = () => {
       </div>
 
       <div className="profile-card-wrapper">
-        <div className="profile-card">
-          <img src={imgProfile} alt="Profile" className="h-full w-full rounded-2xl object-cover" />
+        <div className="orbit-root">
+          <div className="profile-card profile-card-inner">
+            <img src={imgProfile} alt="Profile" className="h-full w-full rounded-2xl object-cover" />
+          </div>
+          <div className="orbit-container" aria-hidden="true">
+            {orbitTech.map((tech, idx) => {
+              const angle = idx * 60;
+              const radians = (angle * Math.PI) / 180;
+              const x = Math.cos(radians) * orbitRadius;
+              const y = Math.sin(radians) * orbitRadius;
+
+              return (
+                <div key={tech.name} className="orbit-layer">
+                  <div
+                    className="orbit-icon"
+                    style={{ '--orbit-x': `${x}px`, '--orbit-y': `${y}px` }}
+                    tabIndex={0}
+                    aria-label={`${tech.name}: ${tech.tooltip}`}
+                  >
+                    <img src={tech.icon} alt={tech.name} className="orbit-icon-image" />
+                    <span className="orbit-tooltip">{tech.tooltip}</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
 
