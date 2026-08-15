@@ -3,6 +3,7 @@ import imgWalletTracker from '../assets/images/Wallet-Tracker.png';
 import imgStay from '../assets/images/stay ease.png';
 import imgCarCommerce from '../assets/images/obolocar.png';
 import imgWeather from '../assets/images/weather.png';
+import imgUserManagement from '../assets/images/user.png';
 
 
 export const projects = [
@@ -52,10 +53,17 @@ export const projects = [
     github: 'https://github.com/Genie-hacqman/wallet-Tracker-sys',
     liveDemo: 'https://example.com',
     category: 'In Progress',
+  },
+
+  { 
+    title: 'User Management System',
+    description: 'This is a modern, production-grade full-stack JavaScript ',
+    image: imgUserManagement,
+    techStack: ['react','nodejs','express','prisma','tailwindcss'],
+    github: 'https://github.com/Genie-hacqman/user-info-management-sys',
+    liveDemo: 'https://example.com',
+    category: 'In Progress',
   }
-
-
-
 
 
 
